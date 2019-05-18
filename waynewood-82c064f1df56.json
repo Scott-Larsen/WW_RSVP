@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "aerial-grid-240820",
+  "private_key_id": "82c064f1df56a121eb43fa8c71f64e25d0fe8508",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDvaoZZE1sSdPzB\n/AWxp/n/jxf7qPp7WbNSL3ZClMMeLBuygtwRVdXdzLJqNphIZ2rRHyiDWvMoZBol\nUHBmzAT0RPW5R9tbNiA7y99eVh4Tr2rZ9Pu/+lPNoHG+oOGnyvuqRo3gzaLBoJH9\n9CS8XITpb7vDvg5ZYPW3uPBX7f6z5mCCyJbtKp3eRVMWiwCh+vP1x57eYosPCi5T\nX5zfRwEhfkiI1xb0nPH+/zEVKMF3+ExBEZfKvUP2qU3fF/AyZVDYY6spB+1xjHnE\n+E54ap9y9TnAnAF/91EDZuFmibUecudGiHBYHMrTHGJ9qVaF4hAsY2c3ajkW1wQT\npMGJPGrtAgMBAAECggEAA7ScCbWRUPLQlVayO91ZXYmNxHkJZMQEUNRSj0CVgy+0\nP19jypI6h36gkEucsG+GqV/tv5gLxWdEjv6fZBKU97bi2rrwUTQVlvdWfgj1LuF7\nKjkZdbozy9ic32dxYVMfRrO62cI1BQGC4PGuE+BBX7TkAhPnTZ4rj2wPBD1hwM+w\nqkGb0SOZRs6ihC3G4sGtYOltMRUl1OqEmmj39RYFztZWTN5X2WHLn5K6adcPnyFV\nVXaSV3R3NdSwGAMXjkjoT6JgEV4RV5GvKeVcqAVSfKTi9cRE7KBJgEgSnPhO/syg\ndKpmoUUn+BcmNsUx3unC9FB8vlrpqo4cqFLDCyMuHQKBgQD9vsUVwgoFzte1A48t\niNZrHfmJIQEMG0O24L6IkRlJJzf4yfyUTiRNS+6W+OKWWrisRfz1sjprASl/XGAE\nw/a/HIDnaGv21gfM2F/Anm4a/qhyEo9f2IjASRViZpTSO6hDTEfolKl1FUiSnJ1n\nxUAHk921IbOjkxfN+O4IawacTwKBgQDxiyiWGIOs59OVHpp5CAHBevo5yT3Danmc\ne2cF0lkSMpp9CdEoyY7aBwT+64dVt/hriV0zSwlImwD2IFOUmc8U1gtjqNnezpO3\ntt/BPa7S3qCArf3RohQYnlPLSu8XGhMYFXYhCu3DokmulbvD/QuQGyUaRkHk0BtG\n/P66UjqKAwKBgQDzNMk0LJJstK99mRa/nxtc+hL1w4N8dhl2DH2y6dghjIySUg9c\nmnUi/TeGzrBnSjcdL8vgNt7VNvzuTLzfdHBpBsnqguSQZt59EZrdRTzldNZA19dC\nF4ojOyla8lWMF5AUSOXXX734MdkoZSJdlurjGG/1L4M9sjuruP91ZBem8wKBgQDJ\n0fOEjlEfXMjeNSbu7/C/oCiJtgtER6f7RuTK6XoBCYUp6tT31onkxK647UU0KzaH\na8wS+qR0JQeFn3cWl/l+OGZlzATW9RZaD5QgG5ECon/LZRXKXjmaZFgxaZgiXmgL\n3IrKix4lM2mLVZMA7GMH8pZqwL94FyZjhyqztdcxzwKBgBGG49j52hbZzgLl0rvE\norGbojuN16CzV2wqYBcjLvBwncBO5cPWsp+m72MlqklNgb51Yt+NMDXTlLX2Gdwg\nMjc1lUqZZj0esXT1r6ycnC5hLyXteqhzEmE7id2NNg6LqgIaFyQe+dkiysAEassG\nS3Bo75/G8gQlm7giAjz06Pj9\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets-manager@aerial-grid-240820.iam.gserviceaccount.com",
+  "client_id": "105571025293019421231",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets-manager%40aerial-grid-240820.iam.gserviceaccount.com"
+}

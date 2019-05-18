@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <link rel="icon" type="image/png" href="http://waynewood.org/wp-content/uploads/2017/08/cropped-Waynewood_Logo_Crest_Square_Color-192x192.png" />
+
+        <link href="https://fonts.googleapis.com/css?family=Poly" rel="stylesheet"> 
+
+        <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
+        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/> -->
+
+        <!-- <link href="..static/style.css" rel="stylesheet"/> -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+        <!-- <link href="/static/styles.css" rel="stylesheet"/> -->
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
+
+        <title>WW RSVP</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <!-- <img align="text-center" width="70%" src="http://waynewood.org/wp-content/uploads/2017/08/Waynewood_Website-Header-1.png"> -->
+            </div>
+        </nav>
+
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <main class="container p-5">
+            {% block main %}{% endblock %}
+        </main>
+        
+        <footer class="small text-center text-muted">
+        </footer>
+
+    </body>
+
+</html>

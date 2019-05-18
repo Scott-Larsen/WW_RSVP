@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+<head>
+</head>
+
+{% block title %}
+    WW RSVP
+{% endblock %}
+
+{% block main %}
+
+{% if event %}
+<h3>Thank you for RSVP'ing.  We have you down for {{ number }} people coming to the {{ event }} from Lot {{ lot }}.</h3>
+<p>If you want to RSVP for another event, please fill out below.</p>
+  {% endif %}
+
+<h1>RSVP</h1>
+
+{% if lot %}
+<div class="float-left">
+  You're RSVP'ing for Lot {{ lot }}. <form action="/" method="get">
+  <input type="hidden" name="lot" value="None">
+  <button class="astext">Need to RSVP for another lot?</button>
+  </form>
+</div>
+  {% endif %}
+
+
+<form action="/" method="post">
+{% if not lot %}
+        <div class="form-group">Your Lot #: 
+             <select class="form-control" name="lot">
+                 {% for j in range(lots|length) %}
+  <option value="{{ lots[j] }}">{{ lots[j] }}</option>
+        {% endfor %}
+        </select>
+        </div>
+{% endif %}
+
+        <div class="form-group">Choose Event: 
+             <select class="form-control" name="event">
+                 {% for i in range(worksheet_titles|length) %}
+  <option value="{{ worksheet_titles[i] }}">{{ worksheet_titles[i] }}</option>
+        {% endfor %}
+        </select>
+        </div>
+
+<div class="radio-group">
+  How many people will you have?<br>
+        {% for x in (0,3,6) %}
+        <div>
+                 {% for y in range(3) %}
+          <input type="radio" name="number" value={{ x+y }} id={{ x+y }} /><label for="{{ x+y }}">{{ x+y }}</label>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div>
+
+  9 or more? Enter your number here:<br>
+    <input type="text" name="num"><br>
+  </div>
+
+<div>
+        <button class="RSVP btn btn-primary" type="submit" style="padding: .5rem 2rem; font-size: 2em;">RSVP</button>
+      </div>
+    </form>
+    
+    <div style="margin-top: 20px;">
+            Problem?  E-mail Scott.Larsen [at] Waynewood.org
+    </div>
+
+{% endblock %}
+
