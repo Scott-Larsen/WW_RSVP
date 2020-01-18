@@ -46,54 +46,16 @@ def make_reservation(event, lot, number):
 @app.route("/", methods=["GET", "POST"])
 def index():
 
-    # print(request.form.get("lot"))
-
-    if request.form.get("lot") == 'None':
-        print("'None'")
-
-    if request.form.get("lot") == None:
-        print('None')
-
-    if request.form.get("lot") == None:
-        lot = None
-
-    try:
-        if lot is not None:
-            pass
-    except:
-        lot = None
-
-    # if 'lot' not in request.cookies:
-    #             expire_date = datetime.datetime.now()
-    #             expire_date = expire_date + datetime.timedelta(days=9000)
-    #             resp.set_cookie('lot', str(lot), expires=expire_date)
-
-    # resp = None
-
-    # if request.form.get("lot") == None:
-    #     print('Triggered Lot reset')
-    #     resp.set_cookie('lot', None, expires = -1)
-    
-    try:
-        print(f"lot is {lot} on line 67")
-    except Exception:
-        pass
-        
-    if lot != None and 'lot' not in locals():
+    if 'lot' not in locals():
         if 'lot' in request.cookies:
             lot = request.cookies.get('lot')
             if lot == 'C':
                 pass
             else:
                 lot = int(lot)
-    
-    try:
-        print(f"lot is {lot} on line 77")
-    except Exception:
-        pass
 
     if request.method == "POST":
-        # print('Triggered top if POST')
+        print('Triggered top if POST')
 
         if not request.form.get("event"):
             return apology("Please choose an event.", 400)
@@ -120,13 +82,8 @@ def index():
         except:
             number = int(request.form.get("number"))
 
-        if lot is None or 'lot' not in locals():
+        if 'lot' not in locals():
             lot = int(request.form.get("lot"))
-
-        try:
-            print(event, lot, number)
-        except:
-            pass
 
         try:
             make_reservation(event, lot, number)
@@ -146,7 +103,7 @@ def index():
             return resp
 
     else:
-        # print('Triggered bottom except')
+        print('Triggered bottom except')
         #client.login()
         return render_template("index.html", worksheet_titles=get_worksheet_titles(spreadsheet), lots = lots)
 
