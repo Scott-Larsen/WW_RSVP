@@ -13,7 +13,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # scope = ['https://spreadsheets.google.com/feeds']
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 # scope = ['https://spreadsheets.google.com/feeds' + ' ' +'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('waynewood-82c064f1df56.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 # oauth2client.client.Credentials.refresh()
 client = gspread.authorize(creds)
 
