@@ -11,6 +11,7 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+# Pull in APIs stored as Heroku Config Vars and convert from multiline strings to JSON
 client_secret = json.load('client_secret')
 
 # scope = ['https://spreadsheets.google.com/feeds']
