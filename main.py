@@ -4,16 +4,19 @@ from flask import Flask, flash, redirect, render_template, request, session, mak
 from werkzeug.exceptions import default_exceptions
 from tempfile import mkdtemp
 import os
+import json
 
 app = Flask(__name__)
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+client_secret = json.load('client_secret')
+
 # scope = ['https://spreadsheets.google.com/feeds']
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 # scope = ['https://spreadsheets.google.com/feeds' + ' ' +'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name(client_secret, scope)
 # oauth2client.client.Credentials.refresh()
 client = gspread.authorize(creds)
 
