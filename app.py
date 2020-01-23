@@ -3,6 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from flask import Flask, flash, redirect, render_template, request, session, make_response
 from werkzeug.exceptions import default_exceptions
 from tempfile import mkdtemp
+from client_secret import client_secret
 import os
 import json
 
@@ -10,12 +11,6 @@ app = Flask(__name__)
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-
-# # Pull in API key info stored as Heroku Config Vars and convert from multiline strings to JSON
-# client_secret = json.loads('client_secret')
-
-# for c in client_secret:
-#     print(c[:6])
 
 # scope = ['https://spreadsheets.google.com/feeds']
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
