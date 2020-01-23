@@ -12,7 +12,10 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Pull in API key info stored as Heroku Config Vars and convert from multiline strings to JSON
-client_secret = json.load('client_secret')
+client_secret = json.loads('client_secret')
+
+for c in client_secret:
+    print(c[:6])
 
 # scope = ['https://spreadsheets.google.com/feeds']
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
